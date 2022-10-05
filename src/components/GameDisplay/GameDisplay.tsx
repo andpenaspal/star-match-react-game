@@ -1,18 +1,18 @@
 import React from 'react';
+import UserDisplay from '../UserDisplay/UserDisplay';
 import 'components/GameDisplay/GameDisplay.css';
+import StarDisplay from '../StarDisplay/StarDisplay';
 
 export interface GameDisplayProps {
   numberStars: number;
+  isWon: boolean;
+  restartGame: () => void;
 }
 
-function GameDisplay({ numberStars }: GameDisplayProps) {
-  const stars = Array.from({ length: numberStars }, (_, i) => i + 1);
-
+function GameDisplay({ numberStars, isWon, restartGame }: GameDisplayProps) {
   return (
     <div className="Game-display">
-      {stars.map((starId) => (
-        <div key={starId} className="star" />
-      ))}
+      {isWon ? <UserDisplay onClick={restartGame} /> : <StarDisplay numberStars={numberStars} />}
     </div>
   );
 }

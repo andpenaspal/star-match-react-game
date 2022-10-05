@@ -59,12 +59,19 @@ function Game() {
     checkCandidateNumbers(newCandidateNumbers);
   };
 
+  const isWon = availableNumbers.length === 0;
+  const restartGame = () => {
+    setAvailableNumbers(getIndexFilledArray(numberOptions));
+    setNumberStars(getRandomNumberInRange(1, numberOptions));
+    setCandidateNumbers([]);
+  };
+
   return (
     <div className="Game">
       <header className="Game-header">{header}</header>
       <div className="Game-helper">{helper}</div>
       <div className="Game-board">
-        <GameDisplay numberStars={numberStars} />
+        <GameDisplay numberStars={numberStars} isWon={isWon} restartGame={restartGame} />
         <NumberPicker
           numberPicks={numberOptions}
           getNumberPickStatus={numberStatus}

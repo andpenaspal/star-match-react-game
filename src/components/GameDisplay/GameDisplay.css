@@ -4,13 +4,3 @@
   text-align: center;
   padding: 20px 5px 20px 5px;
 }
-
-.star {
-  display: inline-block;
-  margin: 0 15px;
-}
-
-.star:after {
-  content: '\2605';
-  font-size: 45px;
-}
