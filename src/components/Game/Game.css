@@ -1,0 +1,17 @@
+.Game-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  font-size: 2.5em;
+}
+
+.Game-helper {
+  color: gray;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.Game-board {
+  display: flex;
+}
