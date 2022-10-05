@@ -1,4 +1,5 @@
 import React from 'react';
+import 'components/NumberPick/NumberPick.css';
 
 export enum NumberPickStatus {
   AVAILABLE = 'AVAILABLE',

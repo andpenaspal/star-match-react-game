@@ -4,20 +4,3 @@
   text-align: center;
   padding: 10px;
 }
-
-.Number-pick {
-  border: 2px solid black;
-  cursor: pointer;
-  background-color: lightgray;
-  text-align: center;
-  width: 45px;
-  height: 45px;
-  margin: 10px;
-  display: inline-block;
-  vertical-align: middle;
-  font-size: 1.5em;
-}
-
-.Number-pick:hover {
-  border: 0px;
-}
